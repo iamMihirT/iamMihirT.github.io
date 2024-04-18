@@ -16,21 +16,22 @@ const GlobalStyle = createGlobalStyle`
 
 const HeroContainer = styled.div`
   background-image: url('https://wallpapers.com/images/featured/new-york-city-5oaa14h4mw6w3o71.jpg');
-  height: 100vh;
+  background-attachment: fixed; // This ensures the background stays fixed during scroll
   background-size: cover;
-  background-position: center; /* Ensure the background image is centered */
+  background-position: center;
+  height: 100vh; // This ensures that the hero container takes up the full viewport height
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  position: relative; /* Needed for absolute positioning of elements inside */
+  position: relative; // Child elements can be absolutely positioned relative to this
 `;
 
 const ProfileImage = styled.img`
   border-radius: 50%;
-  width: 150px; /* Adjust as necessary */
-  height: 150px; /* Maintain aspect ratio */
+  width: 200px; /* Adjust as necessary */
+  height: 200px; /* Maintain aspect ratio */
   border: 5px solid white; /* White border around the image */
   margin-bottom: 1rem; /* Space below the image */
 `;
@@ -49,12 +50,13 @@ const Email = styled.p`
 
 const TypingContainer = styled.div`
   color: white; /* Text color */
-  font-size: 1.5rem; /* Adjust size for the typing animation */
+  font-size: 1.48rem; /* Adjust size for the typing animation */
   margin-bottom: 2rem; /* Space below the typing animation */
   display: flex;
-  align-items: baseline;
-  width: 300px; /* Set a fixed width large enough to hold the longest string */
+  align-items: center;
+  min-width: 300px; /* Set a fixed width large enough to hold the longest string */
   justify-content: center; /* Center the content */
+  min-height: 2.1rem;
 `;
 
 const StaticText = styled.span`
@@ -63,8 +65,24 @@ const StaticText = styled.span`
   margin-right: 0.5rem;
 `;
 
-// Assuming you already have a SocialLinks styled component
-// Otherwise, you can add more styling as needed
+const IntroSection = styled.section`
+  background-color: white; // Assuming the intro has a white background
+  padding: 50px; // Adjust padding to match your design
+  // Add additional styling to match the screenshot
+`;
+
+const SectionTitle = styled.h2`
+  font-size: 2rem; // Adjust to match your design
+  text-align: center;
+  margin-bottom: 30px;
+  // Add additional styling to match the screenshot
+`;
+
+// Example styling for news items
+const NewsItem = styled.div`
+  margin-bottom: 15px;
+  // Add additional styling to match the screenshot
+`;
 
 const HeroSection = () => (
     <>
@@ -72,10 +90,10 @@ const HeroSection = () => (
       <HeroContainer>
         <ProfileImage src={profile_pic} alt="Mihir Trivedi" />
         <Name>Mihir Trivedi</Name>
-        <Email>mtrivedi@mpi-sws.org</Email>
+        <Email>mtrivedi [at] mpi-sws [dot] org</Email>
         <TypingContainer>
           <StaticText>I'm a</StaticText>
-          <TypingEffect words={['Researcher', 'Coder', 'Engineer']} />
+          <TypingEffect words={['Researcher', 'Coder', 'Swiss Army Knife']} />
         </TypingContainer>
         <SocialLinks />
       </HeroContainer>

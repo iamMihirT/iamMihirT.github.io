@@ -1,17 +1,21 @@
+// src/App.tsx or wherever your main layout is
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import HeroSection from './components/HeroSection';
-// Import your global styles if you have any
-// import './globalStyles.ts'; 
-
-function App() {
+import IntroSection from './components/IntroSection';
+import InterestsEducationSection from './components/InterestsEducationSection';
+import ExperienceSection from './components/ExperienceSection';
+import PublicationsSection from './components/PublicationsSection';
+const App = () => {
   return (
-    <div className="App">
+    <>
       <HeroSection />
-      {/* If you have other sections, include them here */}
-    </div>
+      <IntroSection />
+      <InterestsEducationSection />
+      <ExperienceSection/>
+      <PublicationsSection/>
+      {/* Add more sections or footer as needed */}
+    </>
   );
-}
+};
 
 export default App;

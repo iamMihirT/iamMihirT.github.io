@@ -21,25 +21,44 @@ const SocialLink = styled.a`
   }
   // Add more styling as needed
 `;
+const CVLink = styled(SocialLink)`
+  font-weight: bold; // Makes the text bold
+  font-size: 1.5em; // Sets the font size to match the icons
+  display: flex; // Aligns the text properly with icons
+  align-items: center; // Centers the text with icons vertically
+  justify-content: center; // Centers the text horizontally (if the element has a set width)
+  height: 1.5rem; // Matches the height of the FontAwesome icons
+  line-height: 1; // Adjust line height to match the icons
+  padding: 0.1rem 0.05rem; // Add padding to create a similar shape to the icons
+`;
+
+// Adjust the SocialLink component if necessary to ensure uniformity
+const IconLink = styled(SocialLink)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 
 const SocialLinks = () => {
   return (
     <SocialLinksContainer>
-      <SocialLink href="https://www.linkedin.com/in/mtrivedi16/" target="_blank" rel="noopener noreferrer">
+      <IconLink href="https://www.linkedin.com/in/mtrivedi16/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
-      </SocialLink>
-      <SocialLink href="https://github.com/iamMihirT/" target="_blank" rel="noopener noreferrer">
+      </IconLink>
+      <IconLink href="https://github.com/iamMihirT/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} size="2x" />
-      </SocialLink>
-      <SocialLink href="https://twitter.com/MihirT002" target="_blank" rel="noopener noreferrer">
+      </IconLink>
+      <IconLink href="https://twitter.com/MihirT002" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
-      </SocialLink>
-      <SocialLink href="https://scholar.google.com/citations?user=cjfnB_YAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faGraduationCap} size="2x" />
-      </SocialLink>
+      </IconLink>
+      <CVLink href="https://drive.google.com/file/d/1eLlITpt8c2mYZt6EW7TX-sDSKhUf5n9X/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        CV
+      </CVLink>
       {/* Add more social links as needed */}
     </SocialLinksContainer>
   );
 };
+
 
 export default SocialLinks;

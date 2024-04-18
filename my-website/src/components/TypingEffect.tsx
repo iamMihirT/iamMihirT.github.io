@@ -17,7 +17,7 @@ interface TypingProps {
 const TypingEffect: React.FC<TypingProps> = ({
   words,
   loop = true,
-  typeSpeed = 100,
+  typeSpeed = 120,
   deleteSpeed = 50,
   delayBetweenWords = 1000
 }) => {
