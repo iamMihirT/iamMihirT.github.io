@@ -46,7 +46,7 @@ const Link = styled.a`
 
 const IntroSection = () => {
     return (
-      <IntroContainer>
+      <IntroContainer id = "intro">
         <IntroTitle>Intro</IntroTitle>
         <IntroText>
           Hi, I am Mihir, a first-year master's student in Electrical Engineering (AI Track) at Columbia University.

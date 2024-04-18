@@ -87,7 +87,7 @@ const NewsItem = styled.div`
 const HeroSection = () => (
     <>
       <GlobalStyle />
-      <HeroContainer>
+      <HeroContainer id = "home">
         <ProfileImage src={profile_pic} alt="Mihir Trivedi" />
         <Name>Mihir Trivedi</Name>
         <Email>mtrivedi [at] mpi-sws [dot] org</Email>
