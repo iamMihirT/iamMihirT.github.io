@@ -8,7 +8,7 @@ import PublicationsSection from './components/PublicationsSection';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-
+import BurgerMenu from './components/BurgerMenu';
 const TopButton = styled.button`
   position: fixed;
   bottom: 20px;
@@ -50,7 +50,7 @@ function App() {
 
   return (
     <>
-      
+      <BurgerMenu/>
       <HeroSection />
       <IntroSection />
       <InterestsEducationSection />
