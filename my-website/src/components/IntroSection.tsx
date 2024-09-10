@@ -49,7 +49,7 @@ const IntroSection = () => {
       <IntroContainer id = "intro">
         <IntroTitle>Intro</IntroTitle>
         <IntroText>
-          Hi, I am Mihir, a first-year master's student in Electrical Engineering (AI Track) at Columbia University.
+          Hi, I am Mihir, a first-year master's student in Electrical Engineering (AI Track) at Columbia University. I am currently looking for Summer 2025 internships. I am aiming to applying my software engineering and research skills to vast domain of industries.
           <br /><br />
           My primary research interests lie in Reinforcement Learning, Natural Language Processing, and Control. Through my research, I aim to apply and optimize state-of-the-art algorithms and methods for specific niche areas, creating practical impact. My long-term goal is to work on optimizing large systems, such as trading platforms, leveraging my knowledge in these areas.
           <br /><br />
