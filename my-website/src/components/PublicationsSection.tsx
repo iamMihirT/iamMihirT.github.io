@@ -93,7 +93,7 @@ const publications = [
     paperUrl: "https://www.mdpi.com/2227-7390/10/19/3626"
   },
   {
-    imageUrl: "https://onlinelibrary.wiley.com/cms/asset/b3c86bcf-0b9f-4546-bf42-e8359f52f6ea/etep9761157-fig-0001-m.jpg",
+    imageUrl: "https://onlinelibrary.wiley.com/cms/asset/a7519b6c-a73c-4d61-88a8-9707924a5260/etep9761157-fig-0001-m.png",
     title: "SV2G-ET: A Secure Vehicle-to-Grid Energy Trading Scheme Using Deep Reinforcement Learning",
     journal: "International Transactions on Electrical Energy Systems, Wiley 2022",
     authors: "Aparna Kumari, Mihir Trivedi, Sudeep Tanwar",
