@@ -49,9 +49,9 @@ const IntroSection = () => {
       <IntroContainer id = "intro">
         <IntroTitle>Intro</IntroTitle>
         <IntroText>
-          Hi, I am Mihir, a first-year master's student in Electrical Engineering (AI Track) at Columbia University. I am currently looking for Summer 2025 internships. I am aiming to applying my software engineering and research skills to vast domain of industries.
-          <br /><br />
-          My primary research interests lie in Reinforcement Learning, Natural Language Processing, and Control. Through my research, I aim to apply and optimize state-of-the-art algorithms and methods for specific niche areas, creating practical impact. My long-term goal is to work on optimizing large systems, such as trading platforms, leveraging my knowledge in these areas.
+        Hi, I'm Mihir, a first-year master's student in Electrical Engineering with a focus on AI at Columbia University. I'm currently seeking Summer 2025 internships where I can apply my software engineering and research skills. I'm particularly interested in machine learning applications across various industries, as well as general software engineering and analyst roles.          
+        <br /><br />
+        My primary research interests lie in Reinforcement Learning, Natural Language Processing, and Control. Through my research, I aim to apply and optimize state-of-the-art algorithms and methods for specific niche areas, creating practical impact. My long-term goal is to work on optimizing large systems, such as trading platforms, leveraging my knowledge in these areas.
           <br /><br />
           Currently, I am working as a Research Fellow at the Max Planck Institute for Software Systems with <Link href="https://binds.ch/" target="_blank" rel="noopener noreferrer">Dr. Laurent Bindschaedler</Link> on the augmentation of satellite images.
           <br /><br />
