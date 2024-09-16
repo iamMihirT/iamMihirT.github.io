@@ -90,7 +90,7 @@ const HeroSection = () => (
       <HeroContainer id = "home">
         <ProfileImage src={profilepic} alt="Mihir Trivedi" />
         <Name>Mihir Trivedi</Name>
-        <Email>mtrivedi [at] mpi-sws [dot] org</Email>
+        <Email>mpt2142 [at] columbia [dot] edu</Email>
         <TypingContainer>
           <StaticText>I'm a</StaticText>
           <TypingEffect words={['Researcher', 'Coder', 'Swiss Army Knife']} />
