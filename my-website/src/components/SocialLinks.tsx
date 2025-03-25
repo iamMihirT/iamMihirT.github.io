@@ -52,7 +52,7 @@ const SocialLinks = () => {
       <IconLink href="https://twitter.com/MihirT002" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
       </IconLink>
-      <CVLink href="https://drive.google.com/file/d/1PLWeGlkgrXupLse_jl4DLUfkjd9e64ya/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <CVLink href="https://drive.google.com/file/d/1RFajZhN5FerSUdV4TdmHtXu6ncobnLVb/view?usp=sharing" target="_blank" rel="noopener noreferrer">
         CV
       </CVLink>
       {/* Add more social links as needed */}
