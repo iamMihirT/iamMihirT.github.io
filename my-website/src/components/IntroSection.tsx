@@ -49,15 +49,19 @@ const IntroSection = () => {
       <IntroContainer id = "intro">
         <IntroTitle>Intro</IntroTitle>
         <IntroText>
-        Hi, I'm Mihir, a first-year master's student in Electrical Engineering with a focus on AI at Columbia University. I'm currently seeking Summer 2025 internships where I can apply my software engineering and research skills. I'm particularly interested in machine learning applications across various industries, as well as general software engineering and analyst roles.          
+        Hi, I'm Mihir, a second-year master's student in Electrical Engineering with a specialization in Data Driven Analysis and Computation at Columbia University. This summer, I'm working as a Quant Researcher at a sports betting platform, focusing on alpha discovery and developing predictive models for sports markets.
         <br /><br />
-        My primary research interests lie in Reinforcement Learning, Natural Language Processing, and Control. Through my research, I aim to apply and optimize state-of-the-art algorithms and methods for specific niche areas, creating practical impact. My long-term goal is to work on optimizing large systems, such as trading platforms, leveraging my knowledge in these areas.
+        My research interests center on Quantitative Finance, Reinforcement Learning and GenAI. I'm passionate about applying AI to financial markets—developing systematic trading strategies, risk management models, and alternative data analysis pipelines. My coursework in Quantitative Trading, Statistical Learning, and Generative AI has strengthened my foundation in mathematical finance.
           <br /><br />
-          Currently, I am working as a Research Fellow at the Max Planck Institute for Software Systems with <Link href="https://binds.ch/" target="_blank" rel="noopener noreferrer">Dr. Laurent Bindschaedler</Link> on the augmentation of satellite images.
+          During Spring 2025, I serve as AI Lead at a Columbia-based FinAI startup, building a team to develop an automated tax filing system. I'm also conducting research on reinforcement learning applications for portfolio optimization using financial news sentiment.
           <br /><br />
-          During my undergraduate studies, I had the opportunity to work with <Link href="https://sudeeptanwar.in/" target="_blank" rel="noopener noreferrer">Dr. Sudeep Tanwar</Link> on topics including reinforcement learning, energy trading algorithms, and electric vehicles.
+          Previously, I worked as a Software Research Engineer at the Max Planck Institute for Software Systems with <Link href="https://binds.ch/" target="_blank" rel="noopener noreferrer">Dr. Laurent Bindschaedler</Link>, developing dynamic data pipelines for satellite image augmentation and building LLM-based querying systems.
           <br /><br />
-          If you're interested in my work or would like to discuss any shared technical interests, feel free to get in touch!
+          During my undergraduate studies, I had the opportunity to work with <Link href="https://sudeeptanwar.in/" target="_blank" rel="noopener noreferrer">Dr. Sudeep Tanwar</Link> on reinforcement learning algorithms for energy trading systems and electric vehicles, resulting in published research.
+          <br /><br />
+          My long-term goal is to become a quantitative researcher, leveraging machine learning and statistical methods to develop systematic trading strategies and optimize financial systems at scale.
+          <br /><br />
+          If you're interested in discussing quantitative finance, AI applications in trading, or alpha discovery, feel free to reach out!
         </IntroText>
       </IntroContainer>
     );

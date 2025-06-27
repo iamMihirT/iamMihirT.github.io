@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import SocialLinks from './SocialLinks';
-import profilepic from '../assets/profile_pic.jpeg';
+import linkedin_profile_pic from '../assets/linkedin_profile_pic.jpeg';
 import TypingEffect from './TypingEffect';
 
 // Global styles
@@ -88,12 +88,12 @@ const HeroSection = () => (
     <>
       <GlobalStyle />
       <HeroContainer id = "home">
-        <ProfileImage src={profilepic} alt="Mihir Trivedi" />
+        <ProfileImage src={linkedin_profile_pic} alt="Mihir Trivedi" />
         <Name>Mihir Trivedi</Name>
         <Email>mpt2142 [at] columbia [dot] edu</Email>
         <TypingContainer>
           <StaticText>I'm a</StaticText>
-          <TypingEffect words={['Researcher', 'Coder', 'Swiss Army Knife']} />
+          <TypingEffect words={['Researcher', 'Coder', 'Quant']} />
         </TypingContainer>
         <SocialLinks />
       </HeroContainer>
