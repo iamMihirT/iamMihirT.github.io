@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import googleScholarIcon from '../assets/google_scholar.png';
 
 // Style for the social links container
 const SocialLinksContainer = styled.div`
@@ -39,6 +39,16 @@ const IconLink = styled(SocialLink)`
   justify-content: center;
 `;
 
+const ScholarIcon = styled.img`
+  height: 2rem;
+  width: 2rem;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(98%) saturate(1069%) hue-rotate(175deg) brightness(93%) contrast(87%);
+  }
+`;
+
 
 const SocialLinks = () => {
   return (
@@ -51,6 +61,9 @@ const SocialLinks = () => {
       </IconLink>
       <IconLink href="https://twitter.com/MihirT002" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} size="2x" />
+      </IconLink>
+      <IconLink href="https://scholar.google.com/citations?hl=en&user=cjfnB_YAAAAJ" target="_blank" rel="noopener noreferrer">
+        <ScholarIcon src={googleScholarIcon} alt="Google Scholar" />
       </IconLink>
       <CVLink href="https://drive.google.com/file/d/1oAzLDkv87JfvnAm4I35n2Wc7cGnL5xLs/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
         CV

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faApple } from '@fortawesome/free-brands-svg-icons';
+import asteraLogo from '../assets/astera_logo.png';
+import mpiswsLogo from '../assets/mpisws_logo.png';
 
 const ExperienceContainer = styled.section`
   background-color: #333;
@@ -72,9 +72,18 @@ const Description = styled.p`
 
 const experiences = [
     {
-      companyLogoUrl: "https://www.mpi-sws.org/wp-content/themes/mpi-sws/assets/images/mpi-sws-logo.svg?ver=1.8.2",
+      companyLogoUrl: asteraLogo,
+      companyUrl: "https://www.astera.holdings/",
+      positionTitle: 'Quantitative Researcher Intern',
+      location: 'New York, NY',
+      timeFrame: 'Jun 2025 - Sep 2025',
+      description: 'Built low-latency market data pipelines and Monte Carlo backtesting framework. Developed statistical arbitrage strategies and productionized EV-based execution systems with Kelly-criterion sizing.',
+      key:'astera'
+    },
+    {
+      companyLogoUrl: mpiswsLogo,
       companyUrl: "https://www.mpi-sws.org/",
-      positionTitle: 'Research Intern',
+      positionTitle: 'AI Researcher',
       location: 'Saarbrücken, Germany',
       timeFrame: 'March 2023 - May 2024',
       description: 'As part of the Satellite Data Augmentation Project, I built data pipelines, utilized large language models for data augmentation, and developed the front-end for this project.',

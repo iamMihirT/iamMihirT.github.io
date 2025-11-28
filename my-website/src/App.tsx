@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import IntroSection from './components/IntroSection';
 import InterestsEducationSection from './components/InterestsEducationSection';
 import ExperienceSection from './components/ExperienceSection';
+import ProjectsSection from './components/ProjectsSection';
 import PublicationsSection from './components/PublicationsSection';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -55,6 +56,7 @@ function App() {
       <IntroSection />
       <InterestsEducationSection />
       <ExperienceSection />
+      <ProjectsSection />
       <PublicationsSection />
       <TopButton onClick={scrollToTop}>
         <FontAwesomeIcon icon={faArrowUp} size="lg" />

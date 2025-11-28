@@ -82,6 +82,7 @@ const BurgerMenu = () => {
           <StyledLink to="home" spy={true} smooth={true} duration={500} onClick={toggleMenu}>Home</StyledLink>
           <StyledLink to="intro" spy={true} smooth={true} duration={500} onClick={toggleMenu}>About</StyledLink>
           <StyledLink to="experience" spy={true} smooth={true} duration={500} onClick={toggleMenu}>Experience</StyledLink>
+          <StyledLink to="projects" spy={true} smooth={true} duration={500} onClick={toggleMenu}>Projects</StyledLink>
           <StyledLink to="publications" spy={true} smooth={true} duration={500} onClick={toggleMenu}>Publications</StyledLink>
         </Menu>
       </BurgerMenuContainer>

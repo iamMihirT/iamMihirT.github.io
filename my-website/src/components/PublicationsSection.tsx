@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import privacyPolicyImg from '../assets/privacypolicy.png';
 
 // Styled components
 const PublicationsContainer = styled.section`
+  background-color: #333;
   padding: 4rem 0;
-  display: flex; // Use flexbox for center alignment
+  display: flex;
   flex-direction: column;
-  align-items: center; // Center the children horizontally
+  align-items: center;
 `;
 
 const PublicationTitle = styled.h2`
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -57,14 +60,16 @@ const PaperDetails = styled.div`
 const PaperTitle = styled.h3`
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #2196f3; // Blue color for the paper title
+  color: #2196f3;
 `;
 
 const Conference = styled.p`
+  color: #ccc;
   margin-bottom: 0.5rem;
 `;
 
 const Authors = styled.p`
+  color: #aaa;
   margin-bottom: 1rem;
   font-style: italic;
 `;
@@ -72,7 +77,7 @@ const Authors = styled.p`
 const PaperButton = styled.a`
   display: inline-block;
   background-color: transparent; // Transparent background
-  color: 2196e3; // Blue text color
+  color: #2196f3; // Blue text color
   padding: 10px 15px;
   border: 1px solid #2196f3; // Blue border
   border-radius: 5px;
@@ -83,8 +88,25 @@ const PaperButton = styled.a`
   }
 `;
 
+const ComingSoonBadge = styled.span`
+  display: inline-block;
+  background-color: rgba(136, 136, 136, 0.2);
+  color: #aaa;
+  padding: 10px 15px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  font-style: italic;
+`;
+
 // Mock data
 const publications = [
+  {
+    imageUrl: privacyPolicyImg,
+    title: "Modernizing Privacy Policy Analysis with LLMs",
+    journal: "Under Review, 2025",
+    authors: "Mihir Trivedi et al.",
+    paperUrl: null
+  },
   {
     imageUrl: "https://www.mdpi.com/mathematics/mathematics-10-03626/article_deploy/html/images/mathematics-10-03626-g002-550.jpg",
     title: "Blockchain and Deep Learning-Based Fault Detection Framework for Electric Vehicles",
@@ -112,9 +134,13 @@ const PublicationsSection = () => {
             <PaperTitle>{paper.title}</PaperTitle>
             <Conference>{paper.journal}</Conference>
             <Authors>{paper.authors}</Authors>
-            <PaperButton href={paper.paperUrl} target="_blank" rel="noopener noreferrer">
-              View Paper
-            </PaperButton>
+            {paper.paperUrl ? (
+              <PaperButton href={paper.paperUrl} target="_blank" rel="noopener noreferrer">
+                View Paper
+              </PaperButton>
+            ) : (
+              <ComingSoonBadge>Coming Soon</ComingSoonBadge>
+            )}
           </PaperDetails>
         </PaperCard>
       ))}

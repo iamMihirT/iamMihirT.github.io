@@ -1,39 +1,52 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 800px;     
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  width: 100%;
+const SectionContainer = styled.section`
+  background-color: #fff;
+  padding: 4rem 2rem;
 `;
 
-const Column = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Title = styled.h2`
-  font-size: 2rem;
+const SectionTitle = styled.h2`
+  color: #212121;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  position: relative;
-
   &:after {
     content: '';
     display: block;
-    width: 40%;
-    height: 3px;
-    background-color: rgb(33, 150, 243);
-    margin-top: 0.25rem;
+    width: 70px;
+    height: 4px;
+    background-color: #2196f3;
+    margin: 0.5rem auto 0;
   }
+`;
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+`;
+
+const Column = styled.div``;
+
+const CardTitle = styled.h3`
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1.5rem;
+  color: #333;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2196f3;
+  display: inline-block;
 `;
 
 const List = styled.ul`
@@ -42,88 +55,97 @@ const List = styled.ul`
   margin: 0;
 `;
 
-/* ─── Interests ───────────────────────────────────────────────────────────── */
-
 const InterestItem = styled.li`
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  color: #000;
+  font-size: 1rem;
+  color: #444;
   margin-bottom: 0.75rem;
-
-  & > svg {
-    margin-right: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+  
+  &:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.1;
   }
 `;
 
-/* ─── Education ───────────────────────────────────────────────────────────── */
-
 const EducationItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   margin-bottom: 1.5rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const EducationHeader = styled.div`
   display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  color: #000;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
 
   & > svg {
     margin-right: 0.75rem;
+    margin-top: 0.2rem;
+    color: #2196f3;
+    flex-shrink: 0;
   }
 `;
 
-const Degree = styled.div`
-  color: #000;
-  font-size: 1.1rem;
+const University = styled.div`
+  color: #666;
+  font-size: 0.95rem;
   margin-left: 1.75rem;
   margin-top: 0.25rem;
 `;
 
+const interests = [
+  'Quantitative Finance & Algorithmic Trading',
+  'Machine Learning',
+  'Mathematical Modeling & Statistical Analysis',
+  'Financial Data Engineering & Infrastructure',
+  'Reinforcement Learning',
+];
+
 const InterestsEducationSection: React.FC = () => (
-  <Container>
-    <Column>
-      <Title>Interests</Title>
-      <List>
-        {[
-          'Quantitative Finance & Algorithmic Trading',
-          'Machine Learning',
-          'Mathematical Modeling & Statistical Analysis',
-          'Financial Data Engineering & Infrastructure',
-          'Reinforcement Learning',
-        ].map((text) => (
-          <InterestItem key={text}>
-            <FontAwesomeIcon icon={faCircle} size="sm" />
-            {text}
-          </InterestItem>
-        ))}
-      </List>
-    </Column>
+  <SectionContainer>
+    <SectionTitle>Background</SectionTitle>
+    <Container>
+      <Column>
+        <CardTitle>Interests</CardTitle>
+        <List>
+          {interests.map((text) => (
+            <InterestItem key={text}>{text}</InterestItem>
+          ))}
+        </List>
+      </Column>
 
-    <Column>
-      <Title>Education</Title>
-      <List>
-        <EducationItem>
-          <EducationHeader>
-            <FontAwesomeIcon icon={faGraduationCap} size="sm" />
-            MS in Electrical Engineering, AI Track, Dec 2025
-          </EducationHeader>
-          <Degree>Columbia University</Degree>
-        </EducationItem>
+      <Column>
+        <CardTitle>Education</CardTitle>
+        <List>
+          <EducationItem>
+            <EducationHeader>
+              <FontAwesomeIcon icon={faGraduationCap} />
+              MS in Electrical Engineering, Machine Learning Track, Dec 2025
+            </EducationHeader>
+            <University>Columbia University</University>
+          </EducationItem>
 
-        <EducationItem>
-          <EducationHeader>
-            <FontAwesomeIcon icon={faGraduationCap} size="sm" />
-            BTech in Electrical Engineering, Minor in Computer Science, 2023
-          </EducationHeader>
-          <Degree>Nirma University</Degree>
-        </EducationItem>
-      </List>
-    </Column>
-  </Container>
+          <EducationItem>
+            <EducationHeader>
+              <FontAwesomeIcon icon={faGraduationCap} />
+              BTech in Electrical Engineering, Minor in Computer Science, 2023
+            </EducationHeader>
+            <University>Nirma University</University>
+          </EducationItem>
+        </List>
+      </Column>
+    </Container>
+  </SectionContainer>
 );
 
 export default InterestsEducationSection;
