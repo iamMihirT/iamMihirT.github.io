@@ -93,7 +93,7 @@ const HeroSection = () => (
         <Email>mpt2142 [at] columbia [dot] edu</Email>
         <TypingContainer>
           <StaticText>I'm a</StaticText>
-          <TypingEffect words={['Researcher', 'Coder', 'Quant']} />
+          <TypingEffect words={['Researcher', 'Coder', 'Swiss Army Knife']} />
         </TypingContainer>
         <SocialLinks />
       </HeroContainer>
