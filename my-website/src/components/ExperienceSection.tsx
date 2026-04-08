@@ -101,6 +101,15 @@ const experiences = [
       invertLogo: true,
       key:'searce'
     },
+    {
+      companyLogoUrl: "https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/06/216X92.png",
+      companyUrl: "https://sudeeptanwar.in/",
+      positionTitle: 'Research Intern',
+      location: 'Ahmedabad, India',
+      timeFrame: 'Sep 2021 – Jan 2023',
+      description: 'I leveraged reinforcement learning and deep learning techniques to optimize energy trading algorithms and enhance safety in electric vehicles.',
+      key:'st-labs'
+    },
   ];
     
 
