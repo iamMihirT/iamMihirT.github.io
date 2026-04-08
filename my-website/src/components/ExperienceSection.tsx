@@ -66,10 +66,17 @@ const TimeFrame = styled.p`
   margin-bottom: 0.5rem; // Adjusted space below time frame
 `;
 
-const Description = styled.p`
+const DescriptionList = styled.ul`
   color: white;
   font-size: 1rem;
-  margin-top: 0; // Remove space above description if needed
+  margin-top: 0;
+  text-align: left;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+
+  li {
+    margin-bottom: 0.4rem;
+  }
 `;
 
 const experiences = [
@@ -79,7 +86,11 @@ const experiences = [
       positionTitle: 'Quantitative Researcher Intern',
       location: 'New York, NY',
       timeFrame: 'Jun 2025 – Sep 2025',
-      description: 'Built a low-latency ingestion engine consolidating 50+ liquidity sources with sub-2s latency, with strict point-in-time alignment to prevent look-ahead bias. Developed statistical arbitrage strategies across sports and digital asset markets using an inverse-error weighted consensus model. Productionized an event-driven execution system with Kelly-criterion sizing and fault-tolerant Kafka routing, targeting strategies with 2%+ expected value.',
+      description: [
+        'Built a low-latency ingestion engine consolidating 50+ liquidity sources with sub-2s latency and strict point-in-time alignment to prevent look-ahead bias.',
+        'Developed statistical arbitrage strategies across sports and digital asset markets using an inverse-error weighted consensus model.',
+        'Productionized an event-driven execution system with Kelly-criterion sizing and fault-tolerant Kafka routing, targeting strategies with 2%+ expected value.',
+      ],
       key:'astera'
     },
     {
@@ -88,7 +99,11 @@ const experiences = [
       positionTitle: 'Software Research Engineer',
       location: 'Saarbrücken, Germany',
       timeFrame: 'Jun 2023 – Jun 2024',
-      description: 'Architected low-latency Python pipelines for Skypulse, a satellite data augmentation platform ingesting real-time satellite imagery, social media, and webcam streams for event detection. Built a Vision Transformer model achieving 96% accuracy for event extraction, feeding a real-time natural language querying system. Deployed production ML workflows using Kubeflow and Docker, and automated geospatial data cleaning with OpenCV and Geopy.',
+      description: [
+        'Architected low-latency Python pipelines for Skypulse, a satellite data augmentation platform ingesting real-time satellite imagery, social media, and webcam streams for event detection.',
+        'Built a Vision Transformer model achieving 96% accuracy for event extraction, feeding a real-time natural language querying system.',
+        'Deployed production ML workflows using Kubeflow and Docker, and automated geospatial data cleaning with OpenCV and Geopy.',
+      ],
       key:'mpi-sws'
     },
     {
@@ -97,7 +112,11 @@ const experiences = [
       positionTitle: 'Data Engineer Intern',
       location: 'Pune, India',
       timeFrame: 'Jan 2023 – Jun 2023',
-      description: 'Engineered generic data accelerators for Teradata-to-BigQuery, AWS RDS-to-BigQuery, and Postgres-to-Spanner migrations, reducing manual effort by 80%. Implemented multithreaded Python pipelines that increased data transfer throughput by 5x, cutting migration timelines from weeks to days. Built automated validation frameworks covering row counts, checksums, and reconciliation, reducing post-migration discrepancies by 70%.',
+      description: [
+        'Engineered generic data accelerators for Teradata-to-BigQuery, AWS RDS-to-BigQuery, and Postgres-to-Spanner migrations, reducing manual effort by 80%.',
+        'Implemented multithreaded Python pipelines that increased data transfer throughput by 5x, cutting migration timelines from weeks to days.',
+        'Built automated validation frameworks covering row counts, checksums, and reconciliation, reducing post-migration discrepancies by 70%.',
+      ],
       invertLogo: true,
       key:'searce'
     },
@@ -107,7 +126,9 @@ const experiences = [
       positionTitle: 'Research Intern',
       location: 'Ahmedabad, India',
       timeFrame: 'Sep 2021 – Jan 2023',
-      description: 'I leveraged reinforcement learning and deep learning techniques to optimize energy trading algorithms and enhance safety in electric vehicles.',
+      description: [
+        'Leveraged reinforcement learning and deep learning techniques to optimize energy trading algorithms and enhance safety in electric vehicles.',
+      ],
       key:'st-labs'
     },
   ];
@@ -125,9 +146,11 @@ const experiences = [
             <PositionTitle>{exp.positionTitle}</PositionTitle>
             <Location>{exp.location}</Location>
             <TimeFrame>{exp.timeFrame}</TimeFrame>
-            <Description>
-              {exp.description}
-            </Description>
+            <DescriptionList>
+              {exp.description.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </DescriptionList>
           </ExperienceCard>
         ))}
       </ExperienceContainer>
