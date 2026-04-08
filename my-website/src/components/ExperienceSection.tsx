@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import asteraLogo from '../assets/astera_logo.png';
 import mpiswsLogo from '../assets/mpisws_logo.png';
+import searceLogo from '../assets/searce_logo.png';
 
 const ExperienceContainer = styled.section`
   background-color: #333;
@@ -42,9 +43,10 @@ const ExperienceCard = styled.div`
   }
 `;
 
-const CompanyLogo = styled.img`
-  height: 4rem; /* You can set the size to fit your design */
+const CompanyLogo = styled.img<{ $invert?: boolean }>`
+  height: 4rem;
   margin-bottom: 0.5rem;
+  ${({ $invert }) => $invert && `filter: invert(1) brightness(2);`}
 `;
 
 const PositionTitle = styled.h3`
@@ -90,12 +92,13 @@ const experiences = [
       key:'mpi-sws'
     },
     {
-      companyLogoUrl: "https://www.searce.com/assets/images/logo.svg",
+      companyLogoUrl: searceLogo,
       companyUrl: "https://www.searce.com/",
       positionTitle: 'Data Enginner Intern',
       location: 'Pune, India',
       timeFrame: 'Jan 2023 - June 2023',
       description: 'I automated data migration pipelines to facilitate seamless data transfer between various cloud servers, including Google BigQuery, AWS RDS, Teradata, and Spanner.',
+      invertLogo: true,
       key:'searce'
     },
     {
@@ -117,7 +120,7 @@ const experiences = [
         {experiences.map(exp => (
           <ExperienceCard key={exp.key}>
             <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer">
-              <CompanyLogo src={exp.companyLogoUrl} alt={exp.positionTitle} />
+              <CompanyLogo src={exp.companyLogoUrl} alt={exp.positionTitle} $invert={exp.invertLogo} />
             </a>
             <PositionTitle>{exp.positionTitle}</PositionTitle>
             <Location>{exp.location}</Location>
