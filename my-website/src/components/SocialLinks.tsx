@@ -65,7 +65,7 @@ const SocialLinks = () => {
       <IconLink href="https://scholar.google.com/citations?hl=en&user=cjfnB_YAAAAJ" target="_blank" rel="noopener noreferrer">
         <ScholarIcon src={googleScholarIcon} alt="Google Scholar" />
       </IconLink>
-      <CVLink href="https://drive.google.com/file/d/1oAzLDkv87JfvnAm4I35n2Wc7cGnL5xLs/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <CVLink href="https://drive.google.com/drive/folders/1InnVclDp5iOPQJdx_2dg4L-WROE-Qm7N?usp=drive_link" target="_blank" rel="noopener noreferrer">
         CV
       </CVLink>
       {/* Add more social links as needed */}
